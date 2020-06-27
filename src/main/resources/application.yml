@@ -1,0 +1,35 @@
+server:
+  servlet:
+    encoding:
+      force: true
+      force-request: true
+      force-response: true
+      charset: UTF-8
+
+spring:
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/kakaopay
+    username: kakaopay
+    password: gH4nRAxHG9NrhNAP
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+#  cache:
+#    type: redis
+#  redis:
+#    host: localhost
+#    port: 6379
+
+logging:
+  level:
+    org.antop: debug
+    jdbc: off
+    jdbc.sqltiming: debug
+    jdbc.resultsettable: debug
+    org.springframework.data.redis: debug

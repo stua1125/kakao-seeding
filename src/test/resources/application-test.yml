@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:kakaopay;DB_CLOSE_DELAY=-1
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create
+  cache:
+    type: none
+
+logging:
+  level:
+    org.antop: debug
+    jdbc: off
+    jdbc.sqltiming: debug
+    jdbc.resultsettable: debug
