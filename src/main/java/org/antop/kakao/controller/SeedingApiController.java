@@ -59,7 +59,7 @@ public class SeedingApiController {
             @RequestHeader(Header.USER_ID) long userId,
             @PathVariable("token") String token) {
         log.debug("roomId={}, userId={}, token={}", roomId, userId, token);
-        Seeding seeding = seedingService.inquiry(roomId, userId, token);
+        Seeding seeding = seedingService.inquiry(userId, token);
 
         SeedingDto dto = new SeedingDto(
                 seeding.getCreatedAt(),
